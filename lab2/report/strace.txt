@@ -1,0 +1,402 @@
+39    execve("./parent", ["./parent"], 0x7ffeba9e74a8 /* 134 vars */) = 0
+39    brk(NULL)                         = 0x5596f4c22000
+39    mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b99c0f3000
+39    access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+39    openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+39    fstat(3, {st_mode=S_IFREG|0644, st_size=73839, ...}) = 0
+39    mmap(NULL, 73839, PROT_READ, MAP_PRIVATE, 3, 0) = 0x70b99c0e0000
+39    close(3)                          = 0
+39    openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+39    read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+39    pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+39    fstat(3, {st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+39    pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+39    mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x70b99be00000
+39    mmap(0x70b99be28000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x70b99be28000
+39    mmap(0x70b99bfb1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000) = 0x70b99bfb1000
+39    mmap(0x70b99c000000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000) = 0x70b99c000000
+39    mmap(0x70b99c006000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x70b99c006000
+39    close(3)                          = 0
+39    mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70b99c0dd000
+39    arch_prctl(ARCH_SET_FS, 0x70b99c0dd740) = 0
+39    set_tid_address(0x70b99c0dda10)   = 39
+39    set_robust_list(0x70b99c0dda20, 24) = 0
+39    rseq(0x70b99c0de060, 0x20, 0, 0x53053053) = 0
+39    mprotect(0x70b99c000000, 16384, PROT_READ) = 0
+39    mprotect(0x5596dca13000, 4096, PROT_READ) = 0
+39    mprotect(0x70b99c133000, 8192, PROT_READ) = 0
+39    prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+39    munmap(0x70b99c0e0000, 73839)     = 0
+39    getpid()                          = 39
+39    write(2, "Parent PID: ", 12)      = 12
+39    write(2, "39", 2)                 = 2
+39    write(2, "\n", 1)                 = 1
+39    write(2, "Enter filename for child1: ", 27) = 27
+39    getrandom("\xe9\x55\xf9\x8f\xf9\x90\x5f\x5c", 8, GRND_NONBLOCK) = 8
+39    brk(NULL)                         = 0x5596f4c22000
+39    brk(0x5596f4c43000)               = 0x5596f4c43000
+39    read(0, "o", 1)                   = 1
+39    read(0, "u", 1)                   = 1
+39    read(0, "t", 1)                   = 1
+39    read(0, "1", 1)                   = 1
+39    read(0, ".", 1)                   = 1
+39    read(0, "t", 1)                   = 1
+39    read(0, "x", 1)                   = 1
+39    read(0, "t", 1)                   = 1
+39    read(0, "\n", 1)                  = 1
+39    write(2, "Enter filename for child2: ", 27) = 27
+39    read(0, "o", 1)                   = 1
+39    read(0, "u", 1)                   = 1
+39    read(0, "t", 1)                   = 1
+39    read(0, "2", 1)                   = 1
+39    read(0, ".", 1)                   = 1
+39    read(0, "t", 1)                   = 1
+39    read(0, "x", 1)                   = 1
+39    read(0, "t", 1)                   = 1
+39    read(0, "\n", 1)                  = 1
+39    openat(AT_FDCWD, "out1.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 3
+39    openat(AT_FDCWD, "out2.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 4
+39    pipe2([7, 8], 0)                  = 0
+39    pipe2([9, 10], 0)                 = 0
+39    clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x70b99c0dda10) = 40
+39    clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40    set_robust_list(0x70b99c0dda20, 24) = 0
+40    dup2(7, 0)                        = 0
+40    dup2(3, 1 <unfinished ...>
+39    <... clone resumed>, child_tidptr=0x70b99c0dda10) = 41
+40    <... dup2 resumed>)               = 1
+39    close(7 <unfinished ...>
+41    set_robust_list(0x70b99c0dda20, 24 <unfinished ...>
+39    <... close resumed>)              = 0
+40    close(7 <unfinished ...>
+39    close(9 <unfinished ...>
+41    <... set_robust_list resumed>)    = 0
+39    <... close resumed>)              = 0
+40    <... close resumed>)              = 0
+39    close(3 <unfinished ...>
+40    close(8 <unfinished ...>
+39    <... close resumed>)              = 0
+41    dup2(9, 0 <unfinished ...>
+40    <... close resumed>)              = 0
+39    close(4 <unfinished ...>
+41    <... dup2 resumed>)               = 0
+39    <... close resumed>)              = 0
+40    close(9 <unfinished ...>
+39    write(2, "Enter lines (Ctrl+D to finish):\n", 32 <unfinished ...>
+41    dup2(4, 1 <unfinished ...>
+40    <... close resumed>)              = 0
+39    <... write resumed>)              = 32
+41    <... dup2 resumed>)               = 1
+40    close(10 <unfinished ...>
+39    read(0,  <unfinished ...>
+41    close(7 <unfinished ...>
+40    <... close resumed>)              = 0
+39    <... read resumed>"H", 1)         = 1
+41    <... close resumed>)              = 0
+40    close(3 <unfinished ...>
+39    read(0,  <unfinished ...>
+41    close(8 <unfinished ...>
+39    <... read resumed>"e", 1)         = 1
+40    <... close resumed>)              = 0
+39    read(0,  <unfinished ...>
+41    <... close resumed>)              = 0
+39    <... read resumed>"l", 1)         = 1
+40    close(4 <unfinished ...>
+39    read(0,  <unfinished ...>
+41    close(9 <unfinished ...>
+39    <... read resumed>"l", 1)         = 1
+40    <... close resumed>)              = 0
+39    read(0,  <unfinished ...>
+41    <... close resumed>)              = 0
+39    <... read resumed>"o", 1)         = 1
+40    execve("./child", ["child"], 0x7fff83940518 /* 134 vars */ <unfinished ...>
+39    read(0,  <unfinished ...>
+41    close(10 <unfinished ...>
+39    <... read resumed>" ", 1)         = 1
+41    <... close resumed>)              = 0
+39    read(0,  <unfinished ...>
+41    close(3 <unfinished ...>
+39    <... read resumed>"W", 1)         = 1
+41    <... close resumed>)              = 0
+39    read(0,  <unfinished ...>
+41    close(4 <unfinished ...>
+39    <... read resumed>"o", 1)         = 1
+41    <... close resumed>)              = 0
+39    read(0,  <unfinished ...>
+41    execve("./child", ["child"], 0x7fff83940518 /* 134 vars */ <unfinished ...>
+39    <... read resumed>"r", 1)         = 1
+39    read(0, "l", 1)                   = 1
+39    read(0, "d", 1)                   = 1
+39    read(0, "\n", 1)                  = 1
+39    write(8, "Hello World\n", 12)     = 12
+39    read(0, "F", 1)                   = 1
+39    read(0, "o", 1)                   = 1
+39    read(0, "o", 1)                   = 1
+39    read(0,  <unfinished ...>
+41    <... execve resumed>)             = 0
+40    <... execve resumed>)             = 0
+39    <... read resumed>" ", 1)         = 1
+39    read(0, "B", 1)                   = 1
+41    brk(NULL <unfinished ...>
+39    read(0,  <unfinished ...>
+40    brk(NULL <unfinished ...>
+39    <... read resumed>"a", 1)         = 1
+41    <... brk resumed>)                = 0x5daa22f2b000
+39    read(0,  <unfinished ...>
+40    <... brk resumed>)                = 0x6401ffa7f000
+39    <... read resumed>"r", 1)         = 1
+39    read(0,  <unfinished ...>
+41    mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+40    mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+39    <... read resumed>"\n", 1)        = 1
+41    <... mmap resumed>)               = 0x736bea533000
+39    write(10, "Foo Bar\n", 8 <unfinished ...>
+40    <... mmap resumed>)               = 0x739d525f2000
+41    access("/etc/ld.so.preload", R_OK <unfinished ...>
+39    <... write resumed>)              = 8
+40    access("/etc/ld.so.preload", R_OK <unfinished ...>
+39    read(0, "A", 1)                   = 1
+39    read(0,  <unfinished ...>
+41    <... access resumed>)             = -1 ENOENT (No such file or directory)
+39    <... read resumed>"b", 1)         = 1
+40    <... access resumed>)             = -1 ENOENT (No such file or directory)
+39    read(0,  <unfinished ...>
+41    openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+39    <... read resumed>"c", 1)         = 1
+40    openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+39    read(0,  <unfinished ...>
+41    <... openat resumed>)             = 3
+39    <... read resumed>"d", 1)         = 1
+41    fstat(3,  <unfinished ...>
+39    read(0,  <unfinished ...>
+40    <... openat resumed>)             = 3
+39    <... read resumed>"e", 1)         = 1
+41    <... fstat resumed>{st_mode=S_IFREG|0644, st_size=73839, ...}) = 0
+39    read(0,  <unfinished ...>
+40    fstat(3,  <unfinished ...>
+39    <... read resumed>"f", 1)         = 1
+41    mmap(NULL, 73839, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+39    read(0,  <unfinished ...>
+40    <... fstat resumed>{st_mode=S_IFREG|0644, st_size=73839, ...}) = 0
+39    <... read resumed>"\n", 1)        = 1
+41    <... mmap resumed>)               = 0x736bea520000
+39    write(8, "Abcdef\n", 7 <unfinished ...>
+40    mmap(NULL, 73839, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+39    <... write resumed>)              = 7
+41    close(3 <unfinished ...>
+39    read(0,  <unfinished ...>
+40    <... mmap resumed>)               = 0x739d525df000
+39    <... read resumed>"T", 1)         = 1
+41    <... close resumed>)              = 0
+39    read(0,  <unfinished ...>
+40    close(3 <unfinished ...>
+39    <... read resumed>"e", 1)         = 1
+41    openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+39    read(0,  <unfinished ...>
+40    <... close resumed>)              = 0
+39    <... read resumed>"s", 1)         = 1
+40    openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+39    read(0,  <unfinished ...>
+41    <... openat resumed>)             = 3
+39    <... read resumed>"t", 1)         = 1
+41    read(3,  <unfinished ...>
+40    <... openat resumed>)             = 3
+39    read(0,  <unfinished ...>
+41    <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+39    <... read resumed>"\n", 1)        = 1
+40    read(3,  <unfinished ...>
+39    write(10, "Test\n", 5 <unfinished ...>
+41    pread64(3,  <unfinished ...>
+39    <... write resumed>)              = 5
+40    <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+39    read(0,  <unfinished ...>
+41    <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+39    <... read resumed>"", 1)          = 0
+40    pread64(3,  <unfinished ...>
+39    close(8 <unfinished ...>
+41    fstat(3,  <unfinished ...>
+39    <... close resumed>)              = 0
+40    <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+39    close(10 <unfinished ...>
+41    <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+39    <... close resumed>)              = 0
+40    fstat(3,  <unfinished ...>
+39    wait4(40,  <unfinished ...>
+41    pread64(3,  <unfinished ...>
+40    <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+41    <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+40    pread64(3,  <unfinished ...>
+41    mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+40    <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+41    <... mmap resumed>)               = 0x736bea200000
+40    mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+41    mmap(0x736bea228000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+40    <... mmap resumed>)               = 0x739d52200000
+41    <... mmap resumed>)               = 0x736bea228000
+40    mmap(0x739d52228000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+41    mmap(0x736bea3b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000 <unfinished ...>
+40    <... mmap resumed>)               = 0x739d52228000
+41    <... mmap resumed>)               = 0x736bea3b1000
+40    mmap(0x739d523b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000 <unfinished ...>
+41    mmap(0x736bea400000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000 <unfinished ...>
+40    <... mmap resumed>)               = 0x739d523b1000
+41    <... mmap resumed>)               = 0x736bea400000
+40    mmap(0x739d52400000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000 <unfinished ...>
+41    mmap(0x736bea406000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+40    <... mmap resumed>)               = 0x739d52400000
+41    <... mmap resumed>)               = 0x736bea406000
+40    mmap(0x739d52406000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+41    close(3 <unfinished ...>
+40    <... mmap resumed>)               = 0x739d52406000
+41    <... close resumed>)              = 0
+40    close(3 <unfinished ...>
+41    mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+40    <... close resumed>)              = 0
+41    <... mmap resumed>)               = 0x736bea51d000
+40    mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+41    arch_prctl(ARCH_SET_FS, 0x736bea51d740) = 0
+40    <... mmap resumed>)               = 0x739d525dc000
+41    set_tid_address(0x736bea51da10)   = 41
+40    arch_prctl(ARCH_SET_FS, 0x739d525dc740 <unfinished ...>
+41    set_robust_list(0x736bea51da20, 24 <unfinished ...>
+40    <... arch_prctl resumed>)         = 0
+41    <... set_robust_list resumed>)    = 0
+40    set_tid_address(0x739d525dca10 <unfinished ...>
+41    rseq(0x736bea51e060, 0x20, 0, 0x53053053 <unfinished ...>
+40    <... set_tid_address resumed>)    = 40
+41    <... rseq resumed>)               = 0
+40    set_robust_list(0x739d525dca20, 24) = 0
+40    rseq(0x739d525dd060, 0x20, 0, 0x53053053) = 0
+41    mprotect(0x736bea400000, 16384, PROT_READ <unfinished ...>
+40    mprotect(0x739d52400000, 16384, PROT_READ <unfinished ...>
+41    <... mprotect resumed>)           = 0
+40    <... mprotect resumed>)           = 0
+41    mprotect(0x5da9ebe3f000, 4096, PROT_READ <unfinished ...>
+40    mprotect(0x6401e6347000, 4096, PROT_READ <unfinished ...>
+41    <... mprotect resumed>)           = 0
+40    <... mprotect resumed>)           = 0
+41    mprotect(0x736bea573000, 8192, PROT_READ <unfinished ...>
+40    mprotect(0x739d52632000, 8192, PROT_READ <unfinished ...>
+41    <... mprotect resumed>)           = 0
+40    <... mprotect resumed>)           = 0
+41    prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+40    prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+41    <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+40    <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+41    munmap(0x736bea520000, 73839 <unfinished ...>
+40    munmap(0x739d525df000, 73839 <unfinished ...>
+41    <... munmap resumed>)             = 0
+40    <... munmap resumed>)             = 0
+41    getpid( <unfinished ...>
+40    getpid( <unfinished ...>
+41    <... getpid resumed>)             = 41
+40    <... getpid resumed>)             = 40
+41    write(2, "Child PID: ", 11 <unfinished ...>
+40    write(2, "Child PID: ", 11 <unfinished ...>
+41    <... write resumed>)              = 11
+40    <... write resumed>)              = 11
+41    write(2, "41", 2 <unfinished ...>
+40    write(2, "40", 2 <unfinished ...>
+41    <... write resumed>)              = 2
+40    <... write resumed>)              = 2
+41    write(2, "\n", 1 <unfinished ...>
+40    write(2, "\n", 1 <unfinished ...>
+41    <... write resumed>)              = 1
+40    <... write resumed>)              = 1
+41    getrandom( <unfinished ...>
+40    getrandom( <unfinished ...>
+41    <... getrandom resumed>"\x1a\x16\x6b\x1b\x67\x3c\xc7\x0d", 8, GRND_NONBLOCK) = 8
+40    <... getrandom resumed>"\xf1\xab\xa8\x74\xfc\x5c\xa3\xca", 8, GRND_NONBLOCK) = 8
+41    brk(NULL <unfinished ...>
+40    brk(NULL <unfinished ...>
+41    <... brk resumed>)                = 0x5daa22f2b000
+40    <... brk resumed>)                = 0x6401ffa7f000
+41    brk(0x5daa22f4c000 <unfinished ...>
+40    brk(0x6401ffaa0000 <unfinished ...>
+41    <... brk resumed>)                = 0x5daa22f4c000
+40    <... brk resumed>)                = 0x6401ffaa0000
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"F", 1)         = 1
+40    <... read resumed>"H", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"o", 1)         = 1
+40    <... read resumed>"e", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"o", 1)         = 1
+40    <... read resumed>"l", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>" ", 1)         = 1
+40    <... read resumed>"l", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"B", 1)         = 1
+40    <... read resumed>"o", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"a", 1)         = 1
+40    <... read resumed>" ", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"r", 1)         = 1
+40    <... read resumed>"W", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"\n", 1)        = 1
+40    <... read resumed>"o", 1)         = 1
+41    write(1, "raB ooF\n", 8 <unfinished ...>
+40    read(0, "r", 1)                   = 1
+41    <... write resumed>)              = 8
+40    read(0,  <unfinished ...>
+41    read(0,  <unfinished ...>
+40    <... read resumed>"l", 1)         = 1
+41    <... read resumed>"T", 1)         = 1
+40    read(0,  <unfinished ...>
+41    read(0,  <unfinished ...>
+40    <... read resumed>"d", 1)         = 1
+41    <... read resumed>"e", 1)         = 1
+40    read(0,  <unfinished ...>
+41    read(0,  <unfinished ...>
+40    <... read resumed>"\n", 1)        = 1
+41    <... read resumed>"s", 1)         = 1
+40    write(1, "dlroW olleH\n", 12 <unfinished ...>
+41    read(0, "t", 1)                   = 1
+40    <... write resumed>)              = 12
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"\n", 1)        = 1
+40    <... read resumed>"A", 1)         = 1
+41    write(1, "tseT\n", 5 <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... write resumed>)              = 5
+40    <... read resumed>"b", 1)         = 1
+41    read(0,  <unfinished ...>
+40    read(0,  <unfinished ...>
+41    <... read resumed>"", 1)          = 0
+40    <... read resumed>"c", 1)         = 1
+40    read(0,  <unfinished ...>
+41    exit_group(0 <unfinished ...>
+40    <... read resumed>"d", 1)         = 1
+41    <... exit_group resumed>)         = ?
+40    read(0, "e", 1)                   = 1
+40    read(0, "f", 1)                   = 1
+40    read(0, "\n", 1)                  = 1
+40    write(1, "fedcbA\n", 7 <unfinished ...>
+41    +++ exited with 0 +++
+40    <... write resumed>)              = 7
+39    <... wait4 resumed>0x7fff83940388, 0, NULL) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+40    read(0,  <unfinished ...>
+39    --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=41, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+40    <... read resumed>"", 1)          = 0
+39    wait4(40,  <unfinished ...>
+40    exit_group(0)                     = ?
+40    +++ exited with 0 +++
+39    <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 40
+39    --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+39    wait4(41, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 41
+39    write(2, "Parent: done\n", 13)    = 13
+39    exit_group(0)                     = ?
+39    +++ exited with 0 +++

@@ -1,0 +1,20 @@
+# Compiled binaries
+parent
+child
+*.o
+*.out
+
+# Test output files
+out*.txt
+
+# Personal defense cheat-sheet
+defense_guide.md
+
+# Task materials
+fork+create_process/
+
+# System and editor files
+.DS_Store
+*.swp
+*.swo
+*~
