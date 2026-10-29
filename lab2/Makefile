@@ -13,4 +13,3 @@ child: src/child.c src/utils.c src/utils.h
 
 clean:
 	rm -f parent child out1.txt out2.txt
-	rm -f parent child out1.txt out2.txt
