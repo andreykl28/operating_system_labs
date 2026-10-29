@@ -18,3 +18,9 @@ fork+create_process/
 *.swp
 *.swo
 *~
+*.code-workspace
+.vscode/
+
+# Root report template
+/report/
+/report.zip
